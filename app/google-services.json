@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "791230764358",
+    "project_id": "loginandroid-4780f",
+    "storage_bucket": "loginandroid-4780f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:791230764358:android:0771bf2490d18625320147",
+        "android_client_info": {
+          "package_name": "com.example.loginfb"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAe2gu7keXcoTjF8xji1gtFc_MpJWI14ZI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

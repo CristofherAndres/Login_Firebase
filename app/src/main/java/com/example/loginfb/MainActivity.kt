@@ -1,5 +1,6 @@
 package com.example.loginfb
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -60,6 +61,15 @@ class MainActivity : AppCompatActivity() {
             .addOnCompleteListener{
                 if(it.isSuccessful){
                     Toast.makeText(this, "Inicio de sesión correcto", Toast.LENGTH_SHORT).show()
+
+                    // Ir al post login
+                    try {
+                        val intent = Intent(this, PostLogin::class.java)
+                        startActivity(intent)
+                    } catch (e: Exception) {
+                        Toast.makeText(this, e.toString(), Toast.LENGTH_SHORT).show()
+                    }
+
                 }else{
                     Toast.makeText(this, "Error al iniciar sesión", Toast.LENGTH_SHORT).show()
                 }

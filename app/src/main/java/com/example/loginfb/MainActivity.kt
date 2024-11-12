@@ -54,6 +54,16 @@ class MainActivity : AppCompatActivity() {
             signIn(email, password)
         }
 
+        // Programar el enlace para ir a Registro
+        binding.tvRegistrar.setOnClickListener {
+            try {
+                val intent = Intent(this, RegistrarActivity::class.java)
+                startActivity(intent)
+            } catch (e: Exception) {
+                Toast.makeText(this, e.toString(), Toast.LENGTH_SHORT).show()
+            }
+        }
+
     }
 
     private fun signIn(email: String, password: String) {

@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.loginfb.databinding.ActivityPostLoginBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -35,7 +36,17 @@ class PostLogin : AppCompatActivity() {
         auth = Firebase.auth
 
         binding.btnLogout.setOnClickListener {
-            signOut() // Cerrar sesión
+
+            MaterialAlertDialogBuilder(this)
+                .setTitle("Cerrar sesión")
+                .setMessage("¿Estas seguro que deseas cerrar sesión?")
+                .setNeutralButton("Cancelar") { dialog, which ->
+                    // Respond to neutral button press
+                }
+                .setPositiveButton("Aceptar") { dialog, which ->
+                    signOut() // Cerrar sesión
+                }
+                .show()
         }
 
 
